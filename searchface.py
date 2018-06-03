@@ -3,29 +3,27 @@ import const
 import telegram as tg
 import telegram.ext as tgext
 import skimage
-from skimage.io import imread
+# from skimage import io
+# from skimage.io import imread
 # import skimage.data
 from skimage.feature import hog
 import numpy as np
 from sklearn.externals import joblib
+import cv2
 
 cls = joblib.load('cls.pkl')
 people_size = (62, 47)
 
 
 def search(filepath):
-    print('1')
-    img = imread(filepath)
-    print('2')
+    img = cv2.imread(filepath)
     rects = list()
-    print('3')
-    print(img)
-    print('4')
+    print(img.shape)
     print(type(img))
-    print('5')
 
-    return cls.predict(hog(img[:, :, 2]))
+    # return cls.predict(hog(img[:, :, 2]))
 
 
-search("photos\\3600-RandomDanil.png")
 print(skimage.__version__)
+search("photos\\3600-RandomDanil.png")
+
