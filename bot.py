@@ -6,6 +6,7 @@ import skimage
 from skimage.feature import hog
 import numpy as np
 from sklearn.externals import joblib
+
 cls = joblib.load('cls.pkl')
 people_size = (62, 47)
 
