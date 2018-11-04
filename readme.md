@@ -1,4 +1,4 @@
-how to use this program:
+how this program was made:
 <ol>
     <li><h4>obtaining data:</h4>
         <ul>
